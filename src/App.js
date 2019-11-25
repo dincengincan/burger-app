@@ -14,19 +14,7 @@ class App extends Component {
     this.removeItem = this.removeItem.bind(this);
   }
   
-  isThere(){
-    const is = ingredients.filter(item => {
-      return this.state.ingredients.some(selectedItem => {
-        return item.name === selectedItem.name;
-      })
-    })
-    console.log(is)
-  }
-
-
-
-
-
+  
   addItem(item){
       this.setState({
         ingredients: [...this.state.ingredients].concat([
@@ -37,7 +25,7 @@ class App extends Component {
   
 
   removeItem(){
-    console.log("Removed!")
+    
   }
   
   

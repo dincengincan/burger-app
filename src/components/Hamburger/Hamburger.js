@@ -7,9 +7,16 @@ function Hamburger(props) {
             <div className = "BreadTop" style={{height: "150px"}}>
                 
             </div>
-            <div style={{textAlign: "center"}}>
+            
+            {
+            props.selectedItem < 1 && <div style={{
+                textAlign: "center"
+                }}>
                 MALZEME EKLE !
-            </div>
+                </div>
+            }
+            
+            
             
                 {props.selectedItem.map(item => {
                     return <div key = {item.displayId} style= {{

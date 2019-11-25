@@ -8,12 +8,28 @@ function Item(props) {
                 
             </div>
             <div>
-                {props.isThere}
+                {props.howMany}
             </div> 
             
                 <button onClick= {() => props.addItem(props)} >Add</button>
 
-                <button className="Less" onClick= {props.removeItem}>Remove</button>
+    
+                {
+                    props.isThere 
+                    ? <button className="Less" style={{width: "110px"}} onClick= {props.removeItem}>RemoveOne</button>
+                    : <button className="Less disabled" style={{width: "110px"}} onClick= {props.removeItem}>RemoveOne</button>
+                }
+
+{
+                    props.isThere 
+                    ? <button className="Less" style={{width: "110px"}} onClick= {props.removeItem}>RemoveAll</button>
+                    : <button className="Less disabled" style={{width: "110px"}} onClick= {props.removeItem}>RemoveAll</button>
+                }
+                
+                
+                
+
+                
                 
             
         </div>
