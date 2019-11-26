@@ -22,7 +22,7 @@ function Hamburger(props) {
                     return <div key = {item.displayId} style= {{
                        height: "20px",
                        backgroundColor: item.color,
-                       width: "80%",
+                       width: "40%",
                        margin: "0 auto",
                        marginTop: "10px"
                     }}></div>
