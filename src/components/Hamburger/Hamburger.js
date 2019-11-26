@@ -12,7 +12,7 @@ function Hamburger(props) {
             props.selectedItem < 1 && <div style={{
                 textAlign: "center"
                 }}>
-                MALZEME EKLE !
+                ADD SOME INGREDIENTS !
                 </div>
             }
             

@@ -12,6 +12,7 @@ class App extends Component {
     }
     this.addItem = this.addItem.bind(this);
     this.removeItem = this.removeItem.bind(this);
+    this.removeAllItems = this.removeAllItems.bind(this);
   }
   
   
@@ -24,8 +25,32 @@ class App extends Component {
   }
   
 
-  removeItem(){
-    
+  removeItem(ingredient){
+      const selectedItem = this.state.ingredients.find(item => {
+       return item.name === ingredient.name
+      });
+      
+      
+     this.setState({
+        ingredients: this.state.ingredients.filter(item => {
+        return item.displayId !== selectedItem.displayId;
+        })
+     })
+   }
+
+
+  removeAllItems(ingredient){
+      const selectedItem = ingredients.find(item => {
+        return item.name === ingredient.name
+      })
+      this.setState({
+        ingredients: this.state.ingredients.filter(item => {
+          return item.name !== selectedItem.name
+        })
+      })
+      
+
+
   }
   
   
@@ -38,10 +63,12 @@ class App extends Component {
        <Hamburger selectedItem = {this.state.ingredients}/>
        <ItemList items = {ingredients}
                   addItem = {this.addItem}
+                  removeAllItems = {this.removeAllItems}
                   removeItem = {this.removeItem}
                   selectedItems = {this.state.ingredients}
                    />
-       <TotalPrice/>
+       <TotalPrice selectedItem = {this.state.ingredients}
+       />
 
     </div>
     )

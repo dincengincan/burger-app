@@ -25,6 +25,7 @@ function ItemList(props) {
                 
                 
                 return <Item {...item} key = {item.id}
+                        removeAllItems = {props.removeAllItems}
                         removeItem = {props.removeItem}
                         addItem = {props.addItem}
                         selectedItems = {props.selectedItems}

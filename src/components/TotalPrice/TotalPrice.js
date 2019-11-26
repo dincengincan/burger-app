@@ -1,9 +1,16 @@
 import React from 'react';
 
 function TotalPrice(props) {
+    let total=0;
+    props.selectedItem.forEach(item => {
+        total += item.price;
+    })
+    
+    
+    
     return (
-        <div>
-            TotalPrice
+        <div className ="Label">
+            Total Price: {total} $
         </div>
     )
 
