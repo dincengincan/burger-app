@@ -3,7 +3,7 @@ A simple burger builder app built with React
 
 ## Demo
 
-Use the app online at https://dincengincan.github.io/burger-builder-app/
+Use the app online at https://dincengincan.github.io/burger-builder-react/
 
 ![Burger Builder GIF](demo/burger-builder.gif) 
 
@@ -14,7 +14,7 @@ Assumes local installation of [Node.js](https://nodejs.org)
 To run the project locally:
 
 * Clone this repository `git clone https://github.com/dincengincan/burger-builder-react.git`
-* `cd burger-builder-react`
+* Run `cd burger-builder-react`
 * Run `npm install`
 * Run `npm start` 
 
